@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class SumaSegundosHoras {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Pedimos al usuario que introduzca los segundos
+        System.out.print("Introduce una cantidad de segundos: ");
+        int segundos1 = sc.nextInt();
+
+        // Pedimos al usuario que introduzca los valores de horas, minutos y segundos
+        System.out.print("Introduce el número de horas: ");
+        int horas2 = sc.nextInt();
+        System.out.print("Introduce el número de minutos: ");
+        int minutos2 = sc.nextInt();
+        System.out.print("Introduce el número de segundos: ");
+        int segundos2 = sc.nextInt();
+
+        // Calculamos el total de segundos
+        int totalSegundos = segundos1 + (horas2 * 3600) + (minutos2 * 60) + segundos2;
+
+        // Calculamos las horas, minutos y segundos correspondientes
+        int horasTotal = totalSegundos / 3600;
+        int minutosTotal = (totalSegundos % 3600) / 60;
+        int segundosTotal = totalSegundos % 60;
+
+        // Mostramos el resultado por pantalla
+        System.out.println("La suma de segundos y tiempo introducido corresponde a: "
+                + horasTotal + " horas, " + minutosTotal + " minutos y " + segundosTotal + " segundos.");
+    }
+}
